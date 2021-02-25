@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3A03-webpage-kai</title>
+</head>
+<style>
+    body{
+        background-color: grey;
+        color: white;
+    }
+    #h1{
+        text-align: right;
+    }
+    #img2{
+        margin-left: 550px;
+        margin-top: -50px;
+    }
+    
+
+   
+</style>
+<body>
+    <a id="href1" href="webpage_code.txt"><button>Raw Code</button></a>
+    <h1 id="h1">T3A03-webpage-kai</h1>
+    <br>
+    <br>
+    <p id="p1">Text, just write stuff</p><br>
+    <p id="p1">Picture: <br> </p>
+    <img id="img1" src="pika.jpg" alt="pika" style="width:150px;height:150px;"><br><br>
+    <img id="img2" src="cat.jpg" alt="cat" style="width:150px;height:150px;">
+
+
+    <p id="p1">This is showing an example of image positioning and how to us margin tags in Css</p>
+    <p id="p1">2. 2x2 Table</p><br>
+    
+    <tr><td>A</td><td>B</td></tr>
+    <tr><td>1</td><td>2</td></tr>
+</body>
+</html>

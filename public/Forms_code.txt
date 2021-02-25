@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3A05-forms-kai</title>
+</head>
+
+<style>
+    body{
+        background-color: grey;
+        color: white;
+    }
+    h1{
+        text-align: right;
+    }
+    #myText01,#myNum01,#myPass01,#myCheck01,#myRadio01,#myReset01,#mySub01,#mySel01,#myArea01,#myOp01{
+        border-style: 5px;
+        border-color: black;
+    }
+</style>
+<body>
+    <a id="href1" href="Forms_code.txt"><button>Raw Code</button></a>
+
+    <h1>T3A05-forms-kai</h1>
+    Text: <input type="text" id="myText01" value="FRED"><br>
+    Number: <input type="number" id="myNum01" value=5><br>
+    Password: <input type="password" name="" id="myPass01"><br>
+    Checkbox: <input type="checkbox" name="" id="myCheck01"><br>
+    Radio: <input type="radio" name="" id="myRadio01"><br>
+    Reset: <input type="reset" value="" id="myReset01"><br>
+    Submit: <input type="submit" value="" id="mySub01"><br>
+
+
+    Fancy <br>
+    <select size="1" id="mySle01">
+
+        <option id="myOp01" value="appe">fruit
+        <option id="myOP01" value="steak">Meat
+    </select>
+    <textarea name="" id="myArea01" cols="20" rows="4">
+    Blah, blah, blah
+    </textarea>
+</body>
+</html>

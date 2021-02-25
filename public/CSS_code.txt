@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3A06-CSS-by-kai</title>
+</head>
+<style>
+    body{
+        background-color: grey;
+        color: white;
+    }
+h1{
+    text-align: right;
+    
+}
+
+</style>
+
+<body>
+    <a id="href1" href="CSS_code.txt"><button>Raw Code</button></a>
+
+    <h1 id="myHead01">T3A06-CSS-by-kai</h1>
+    <br>
+    <p id="myP03">Css or Cascade style sheets is used for adding character to a page making it more presentable. Css <br> changed this page to have the grey and white theme to it. If I hadn’t used CSS it would have a <br> black and white theme to it. </p>
+    <br>
+    <p id="myP04">Below I have some examples of different CSS element and things CSS can do I used html and javaScript <br> to make the buttons to show these examples.</p>
+    <br><br>
+    <p id="myP01">Hello World</p>
+    <button id="myBut06" onclick="changeColor('blue');">blue</button>
+    <button id="myBut05" onclick="changeColor('red');">red</button>
+    <p id="myP02">Hello World</p>
+
+<input type="button" value="Text Align Right" id="myBut01" onclick="{
+    document.getElementById('myP02').style['textAlign'] = 'right' ;
+
+    }">
+<input type="button" value="Text Align Left" id="myBut02" onclick="{
+    document.getElementById('myP02').style['textAlign'] = 'left' ;
+    
+    }">
+<input type="button" value="Text Align Center" id="myBut03" onclick="{
+        document.getElementById('myP02').style['textAlign'] = 'center' ;
+            
+    }">
+    <br>
+    <br>
+<input type="button" value="Change Buttons" id="myBut04" onclick="{
+    document.getElementById('myBut01').style.color = 'blue' ; 
+    document.getElementById('myBut02').style.color = 'blue' ; 
+    document.getElementById('myBut03').style.color = 'blue' ; 
+    document.getElementById('myBut04').style.color = 'blue' ; 
+    document.getElementById('myBut05').style.color = 'blue' ; 
+    document.getElementById('myBut06').style.color = 'blue' ; 
+    document.getElementById('myBut07').style.color = 'blue' ;
+    document.getElementById('myBut08').style.color = 'blue' ;
+    document.getElementById('myBut01').style['backgroundColor'] = 'pink';
+    document.getElementById('myBut02').style['backgroundColor'] = 'pink';
+    document.getElementById('myBut03').style['backgroundColor'] = 'pink';
+    document.getElementById('myBut04').style['backgroundColor'] = 'pink';
+    document.getElementById('myBut05').style['backgroundColor'] = 'pink';
+    document.getElementById('myBut06').style['backgroundColor'] = 'pink';
+    document.getElementById('myBut07').style['backgroundColor'] = 'pink';
+    document.getElementById('myBut08').style['backgroundColor'] = 'pink';
+}">
+<input type="button" value="Change Back" id="myBut07" onclick="{
+    document.getElementById('myBut01').style.color = 'black' ; 
+    document.getElementById('myBut02').style.color = 'black' ; 
+    document.getElementById('myBut03').style.color = 'black' ; 
+    document.getElementById('myBut04').style.color = 'black' ; 
+    document.getElementById('myBut05').style.color = 'black' ; 
+    document.getElementById('myBut06').style.color = 'black' ; 
+    document.getElementById('myBut07').style.color = 'black' ; 
+    document.getElementById('myBut08').style.color = 'black' ; 
+
+    document.getElementById('myBut01').style['backgroundColor'] = 'white';
+    document.getElementById('myBut02').style['backgroundColor'] = 'white';
+    document.getElementById('myBut03').style['backgroundColor'] = 'white';
+    document.getElementById('myBut04').style['backgroundColor'] = 'white';
+    document.getElementById('myBut05').style['backgroundColor'] = 'white';
+    document.getElementById('myBut06').style['backgroundColor'] = 'white';
+    document.getElementById('myBut07').style['backgroundColor'] = 'white';
+    document.getElementById('myBut08').style['backgroundColor'] = 'white';
+}">
+<input type="button" value="Add Borders" id="myBut08" onclick="{
+document.getElementById('myP01').style['border'] = 'red 5px dotted' ;
+document.getElementById('myP02').style['border'] = 'red 5px dotted' ;
+document.getElementById('myP03').style['border'] = 'red 5px dotted' ;
+document.getElementById('myP04').style['border'] = 'red 5px dotted' ;
+document.getElementById('myHead01').style['border'] = 'red 5px dotted' ;
+
+document.getElementById('myP01').style['borderRight'] = '5px' ;
+document.getElementById('myP02').style['borderRight'] = '5px' ;
+document.getElementById('myP03').style['borderRight'] = '5px' ;
+document.getElementById('myP04').style['borderRight'] = '5px' ;
+document.getElementById('myHead01').style['borderRight'] = '5px' ;
+
+document.getElementById('myP01').style['marginRight'] = '850px' ;
+document.getElementById('myP02').style['marginRight'] = '850px' ;
+document.getElementById('myP03').style['marginRight'] = '300px' ;
+document.getElementById('myP04').style['marginRight'] = '300px' ;
+document.getElementById('myHead01').style['marginLeft'] = '600px' ;
+}">
+    <script>
+function changeColor(newColor){
+var elem = document.getElementById('myP01')
+elem.style.color = newColor;
+}
+
+    </script>
+</body>
+</html>

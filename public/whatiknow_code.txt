@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3A02-what-i-know-kai</title>
+</head>
+<a id="href1" href="what-i-know-kai2.html"><button>Click here</button></a>
+<style>
+body{
+    background-color: grey;
+    color: white;
+}
+#head1{
+    font-size: 25px;
+
+}
+#head2{
+    position: fixed;
+    margin-left: 600px;
+}   
+#href1{
+        background-color: rgb(92, 92, 92);
+        color: white;
+    }
+</style>
+<body>
+    <h1 id="head2">T3A02-what-i-know-kai</h1>
+    <br>
+    <br>
+    <br>
+<br>
+<br>
+<br>
+
+    <header id="head1">What I Know</header>
+    <p id="p1">I am alright at coding. I know a good amount of html, CSS and the basics of java script.</p>
+    <p id="p1">I can make a functional website with multiple pages and the is properly formatted and <br> colored appropriately. </p>
+    <p id="p1">I am looking to learn a little more java script so I can do more on a webpage and <br> make a functioning game. </p>
+<p id="p1">Some simple things that make me better than the rest is that i alaways add Css and a theme to all my pages <br> I like to add little things that just make things more convenient abd look better.
+</p>
+<br>
+<br> 
+<br>
+<p id="p1">When scrolling the position of the title stays at the top</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+This just shows that the page is scrolling
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+This just shows that the page is scrolling
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+</html>
