@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="href1" href="inOut_code.txt"><button>Raw Code</button></a>
+    <style>
+body{
+    color: white;
+    background-color: grey;
+}
+#head1{
+    text-align: right;
+}
+
+    </style>
+
+    <h1 id="head1">T3A10-inOut-Kai</h1>
+1. Store this input variablr into x: <input id="myText01" type="text" value="3"><br><br>
+
+
+2. <input type="button" value="run first" onclick="{
+// x =5
+
+x = document.getElementById('myText01').value 
+
+x = document.getElementById('mySpan01').innerHTML = x
+// can you put it ito the span ??? instead of an alert
+
+}"> <br><br>
+
+
+3. Span output <span id="mySpan01">...</span> <br> <br>
+
+4. Counting System
+<button type="button" onClick="onClick()">Click me</button> <button type="button" onclick="reset()">Reset</button>
+ <p>Clicks: <a id="clicks">0</a></p>
+<script type="text/javascript">
+    var clicks = 0 
+
+    function onClick() {
+        clicks += 1 
+        document.getElementById("clicks").innerHTML = clicks 
+    }
+    function reset() {
+        clicks = 0
+        document.getElementById("clicks").innerHTML = clicks
+        
+    }
+    </script>
+5. Accepting system:
+<span id="mySpan02">...</span><br><br>
+Accept<input type="checkbox" name="Accept" id="myCheck01" onclick="{
+document.getElementById('mySpan02').innerHTML = 'Accepted'
+
+}">
+
+Decline<input type="checkbox" name="Decline" id="myCheck02" onclick="{
+document.getElementById('mySpan02').innerHTML = 'Declined'
+
+}">
+<br><br>
+6.Password System
+ <br><br>
+ User 1 : <p>User Name: kai</p><p>Password: pass</p><br>
+ User 2 : <p>User Name fred</p><p>Password: pass</p>
+ <br>
+ Any Other log in will bring up a alert <br>
+ and clicking login whith nothing will show a diffrent alert
+  <br><br>
+
+
+  <SCRIPT LANGUAGE="JavaScript">
+
+    function Getstats()
+    {
+    window.status=('Attempting to Login to user area.')
+    
+    var AccId;
+    var iName;
+    AccId = document.iAccInput.iAccID.value
+    iName = document.iAccInput.iName.value
+    
+    if (AccId == "" || iName == "")
+    {
+    alert('\nERROR\nYou must enter ALL Details,\nto View your statistics.\n');
+    window.status=('Missing data or Invalid. Check spelling and Ensure Names are in Correct Case.')
+    }
+    var location = '';
+if (iName=='kai' && AccId=='pass') {
+    location=("inOut2.html");
+}
+else if (iName=='fred' && AccId=='pass') {
+    location=("inOut2.html");
+}
+else alert('Wrong pair');
+
+this.location.href = location;
+    
+    }
+    </SCRIPT>
+    <hr><FORM NAME="iAccInput">
+    <CENTER>
+    <TABLE BORDER="1px" bordercolor="#c0c0c0" cellpadding="5" cellspacing="0">
+        <TR>
+            <TD ALIGN="RIGHT">
+                <p><FONT SIZE="3" FACE="Arial"><B>User Name:</B></FONT>
+                  </p></td>
+    
+            <TD>
+                <INPUT TYPE="TEXT" NAME="iName" MAXLENGTH="15">
+            </td>
+            <TD> &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <TD ALIGN="RIGHT">
+    
+                <p><FONT SIZE="3" FACE="Arial"><B>Password:</B></FONT>
+                  </p></TD>
+            <td>
+                <INPUT type="password" NAME="iAccID" MAXLENGTH="15" HEIGHT="50">
+            </TD>
+            <td align="center">
+                <INPUT TYPE="BUTTON" VALUE=" Login " onClick="Getstats()" HEIGHT="40" WIDTH="50"><BR><br>
+                <INPUT TYPE="RESET" VALUE=" Reset " onClick="window.status=('RESET: Please enter your USERNAME and ACCOUNT ID.')" WIDTH="50">
+    
+            </td>
+        </TR>
+    </TABLE>
+
