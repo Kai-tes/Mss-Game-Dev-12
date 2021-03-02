@@ -1,0 +1,38 @@
+
+ <a id="href1" href="inOut_code.txt"><button>Raw Code</button></a>
+
+
+<bod onKeyDown="{
+    let myArrowKey = event.keyCode
+    let myAlphaKey = event.key
+
+    if (myArrowKey == 37) {
+        document.getElementById('mySpan01').innerHTML = 'Hi from onKeyDown left arrow pressed'
+    }
+
+    if (myAlphaKey == 'd') {
+        document.getElementById('mySpan01').innerHTML = 'Hi from onKeyDown d key pressed'
+    }
+}">
+  <style>
+body{
+    background-color: grey;
+    color: white;
+}
+#head1{
+    text-align: right;
+}
+  </style>
+<h1 id="head1">T3A09-Events-Kai</h1>
+
+Output span: <span id="mySpan01">...</span><br><br>
+
+traditional onClick event: <input type="button" value="onClick event" onclick="{
+    //alert('Hi From onClick')
+    document.getElementById('mySpan01').innerHTML = 'Hit from onClick'
+}"><br><br>
+This is <b>Bold</b> this isn't <br>
+This is <b onmouseover="{
+    document.getElementById('mySpan01').innerHTML = 'Hi from myMouseOver'
+}">Bold and onMouseOver</b> This isn't <br><br>
+</body>
