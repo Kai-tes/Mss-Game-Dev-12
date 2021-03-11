@@ -1,0 +1,69 @@
+<style>
+#head01{
+    text-align: right;
+}
+body{
+    background-color: grey;
+    color: white;
+}
+
+
+</style>
+
+<a id="href1" href="functions_code.txt"><button>Raw Code</button></a>
+<h1 id="head01"> T3A13-functions-Fred.html </h1>
+<h3> Version number: 0.0.1 </h3>
+<script>
+function myBasicFun01(){
+document.getElementById('mySpan01').innerHTML = "wow"
+}
+function myAdvancedFun01(x,y){
+return x*y
+}
+</script>
+<input id="myText01" type=text value=3 ><br><br>
+<input type=button value="Run function" onclick="{
+//alert('button works')
+myBasicFun01()
+}"><br><br>
+<input type=button value="Advanced" onclick="{
+document.getElementById('mySpan01').innerHTML = myAdvancedFun01(3,2)
+}"><br><br>
+<span id="mySpan01" >...</span><br><br>
+
+
+
+
+<h3> Version number: 0.0.2 </h3>
+
+
+
+<script>
+
+function myBasicFun03(){
+    document.getElementById('mySpan02').innerHTML = "To High"
+}
+
+function myBasicFun02(){
+document.getElementById('mySpan02').innerHTML = "wow"
+}
+function myAdvancedFun02(x,y){
+return x*y
+}
+</script>
+<input id="myText02" type=text value=3 ><br><br>
+<input type= button value="Run function" onclick="{
+
+q = getElementById('myText02').value
+
+if ( q <= 9){
+    myBasicFun02()
+
+}else {
+    myBasicFun03()
+}
+}"><br><br>
+<input type=button value="Advanced" onclick="{
+document.getElementById('mySpan02').innerHTML = myAdvancedFun02(3,2)
+}"><br><br>
+<span id="mySpan02">...</span><br><br>

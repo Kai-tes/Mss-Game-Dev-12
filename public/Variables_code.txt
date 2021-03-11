@@ -1,0 +1,70 @@
+<a id="href1" href="Variables_code.txt"><button>Raw Code</button></a>
+
+<body>
+    <style>
+body{
+    background-color: grey;
+    color: white;
+}
+#head1{
+    text-align: right;
+}
+a{
+    color: rgb(98, 204, 253);
+}
+    </style>
+    <h1 id="head1">T3411-Variables-kai.html</h1>
+    Continuing the 9 componenets of programing<br>
+    <ol>
+    <Li>Input/output
+    <li>Variables
+    <li> InputOutput = Stuff in and out
+    <li> Variables = store simple things
+    <li> Decisions = if statements
+    <li> Loops = {}
+    <li> Functions = named groups of code
+    <li> Events = active functions
+    <li> Arrays = stores numbers
+    <li> Objects = Items
+    <li> Classes = Puts functions together
+    </ol>
+    <h3>This page is about variables</h3>
+    Link to pages with good information about computer
+    programming Variables:<br>
+    <ul>
+    <li><a href="https: //maw.wischools.com/cpp/cpp_variables.asp">https: //ww.w3schools.com/cpp/cpp_variables.asp</a><br>
+    int - stores integers (whole numbers), without decimals, such as 123 or -123<br>
+    double - stores floating point oumbers, with decimals, such as 19.99 or -19.99<br>
+    char - stores single characters, such as ‘a’ or 'B'. Char values are surrounded by single quotes<br>
+    string - stores text, such as “Hello World". String values are surrounded by double quotes<br>
+    bool - stores values with two states: true or false<br><br>
+    <li><a href="https://www.w3schools.com/js/DEFAULT.asp">W3 Schools javaScript</a>
+    <li><a href="https://www.codecademy.com/">Codecademy</a>
+    <li><a href="https://www.google.ca/?safe=active&ssui=on">Google</a>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">MDN Web Docs</a>
+    </ul>
+    <h3>What about Javascript?</h3>
+    <h3>Why is that good and bad?</h3>
+    <span id="mySpan01">..</span>
+    <span id="mySpan02">..</span>
+    <br> <h3> Examples</h3> 
+   <input type=button value="easy variable" onclick="{
+    myW = 5
+    myU = 6
+    let myY = 7
+    document .myZ = 8
+    document.getElementById('mySpan01').innerHTML = 'myW = ' + myW ;
+
+    document.getElementById('mySpan02').onclick = click2()
+   
+
+   }">
+
+   <script>
+function click2(){
+    document.getElementById('mySpan02').innerHTML = 'myW = ' + myU ;
+}
+
+   </script>
+
+</body>

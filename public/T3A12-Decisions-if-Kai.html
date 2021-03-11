@@ -1,0 +1,28 @@
+<style>
+body{
+    background-color: grey;
+    color: white;
+}
+#head01{
+    text-align: right;
+}
+
+</style>
+
+<a id="href1" href="Decisions_code.txt"><button>Raw Code</button></a>
+
+<h1 id="head01">T3A12-Decisions-if-Kai</h1>
+<input id="myText02a" type=text value=3>
+<input id="myText02b" type=text value=-7><br>
+<input type=button value="Decide x and y" onclick="{
+myX = document.getElementById('myText02a').value
+myY = document.getElementById('myText02b').value
+MyTemp = '...........'
+if (myX > 2 && myY < -4){
+myTemp = 'x greater than 2 and y less than -4'
+} else {
+myTemp = 'not'
+}
+document.getElementById('mySpan02').innerHTML = myTemp
+}"><br>
+<span id="mySpan02">...</span><br><br>
