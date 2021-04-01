@@ -1,0 +1,28 @@
+Version 0.0.2
+<style>
+#head1{
+    text-align: right;
+
+}
+body{
+background-color: grey;
+color: white;
+
+}
+
+</style>
+
+
+
+<h1 id="head1">T3A16-objects-kai</h1>
+Enter an age into the object: <input id="myText01" type=text value=17><br><br>
+<input type=button value="Make and Show Object" onclick="{
+let myObject = { 
+'firstName': 'John',
+'age' : document.getElementById('myText01').value
+}
+
+document. getElementById( 'mySpan01').innerHTML ='myObject.firstName: ' + myObject.firstName + '<br>' + 'myObject.age: ' + myObject.age
+}"><br><br>
+
+<span id="mySpan01">...</span>
