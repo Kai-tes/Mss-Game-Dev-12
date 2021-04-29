@@ -1,0 +1,50 @@
+Version 0.0.1
+<style>
+#head1{
+text-align: right;
+
+}
+body{
+    background-color: grey;
+    color: white;
+}
+
+
+
+</style>
+
+
+<h1 id="head1">T3A17-bonus-class-kai</h1>
+Enter a your pets name: <input id="myText02" type=text><br><br>
+Enter an age into the class: <input id="myText01" type=text><br><br>
+<script>
+function Pf1(){
+   document.getElementById('mySpan01').innerHTML = 'test'
+}
+</script>
+<input id="myButton131" type="button" value="Make a class myAnimal and run the method myShow01()" onclick="{
+
+
+class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+    myShow01(){
+      if(myText01 == 5, myText02 == 'Fluffy') {
+       document.getElementById('myDiv131').innerHTML = 'Hello '+ '<br>' + this.myName + '<br>' + document.getElementById('myText01').value
+       document.getElementById('myImg01').src = this.myName
+     //alert('test')
+      }
+      }
+ }  // end class myAnimal
+                                                             
+                                        
+   myPet = new myAnimal('pika.jpg', 14)
+   myPet.myShow01()                                                                           
+}"><br><br>
+
+<div id='myDiv131'></div><br>
+<span id="mySpan01"></span>
+
+<img id="myImg01" src="">
