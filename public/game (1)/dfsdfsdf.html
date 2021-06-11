@@ -1,0 +1,364 @@
+<style>
+  body{
+      background-color: rgb(255, 255, 255);
+      position: fixed;
+  }
+  /*
+  #land{
+      position: absolute;
+      height: 400px;
+      width: 1540px;
+      top: 200px;
+      left: 20px;
+  }
+  #wallT{
+      position: absolute;
+      height: 200px;
+      width: 1560px;
+      top: 0px;
+      left: 0px;
+  }
+  #wallB{
+      position: absolute;
+      height: 157px;
+      width: 1560px;
+      top: 600px;
+      left: 0px;
+  }
+  #wallL{
+      position: absolute;
+      height: 600px;
+      width: 25px;
+      top:0px;
+      left: 0px;
+  }
+  #wallR{
+      position: absolute;
+      height: 757px;
+      width: 40px;
+      top: 0px;
+      left: 1560px;
+  }
+  #guy{
+      position: absolute;
+      height: 100;
+      width: 100;
+      top: 350px;
+      left: 250px;  
+  }
+  */
+  
+  
+  
+
+  
+  button{
+    left: 25px;
+    top: 100px;
+  position: absolute;
+    font-size: 15px;
+              font-weight: bold;
+              border-style: solid;
+              border-width: 5px;
+              background-color: rgb(255, 255, 255);
+              color: rgb(0, 174, 255);
+              width: 100px;
+              text-align: center;
+              border-color: rgb(255, 255, 255);
+  }
+  #mySpan01{
+    color: black;
+    top: 350px;
+    left: 250px;
+  }
+  </style>
+  <span id="mySpan01">here</span>
+
+
+
+  
+  <img id="wallT" src="wall.png" style="position: absolute; left: 0; top: 0; width: 1560; height:200">
+  <img id="wallB" src="wall 3.png" style="position: absolute; left: 0; top: 580; width: 1560; height: 157;">
+  <img id="wallL" src="wall2.png" style="position: absolute; left: 0; top: 0; width: 50; height: 600;">
+  <img id="wallR" src="wall 3.1.png" style="position: absolute; left: 1560; top: 0; width: 20; height: 737;">
+ 
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <span id="jerdiv"></span>
+  <script>
+    function myHitOther(my1,my2){
+       left1   = parseInt(document.getElementById(my1).style.left)
+       right1  = left1 + parseInt(document.getElementById(my1).style.width)
+       top1    = parseInt(document.getElementById(my1).style.top)   
+       bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+       left2   = parseInt(document.getElementById(my2).style.left)
+       right2  = left2 + parseInt(document.getElementById(my2).style.width)
+       top2    = parseInt(document.getElementById(my2).style.top)   
+       bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+       if ((right1  >=  left2  ) &&      	   
+           (bottom1 >=  top2   ) &&
+           (left1   <=  right2 ) &&
+           (top1    <=  bottom2) ){
+           return true
+       }
+    }
+    
+    </script>
+  <div id="divv">
+      <img id="guy" src="yett.png" style="position: absolute; left: 250; top: 350; width: 50; height: 50;">
+  </div>
+  
+  
+  <script>
+    var up = false,
+      right = false,
+      down = false,
+      left = false,
+      upGo = true,
+      leftGo = true,
+      rightGo = true,
+      downGo = true,
+      x = window.innerWidth/2-130/2,
+      y = window.innerHeight/2-130/2
+  document.addEventListener('keydown',press)
+  function press(e){
+  
+  
+    if (e.keyCode === 87 /* w */){
+      up = true
+  
+    }
+    if (e.keyCode === 68 /* d */){
+      right = true
+    }
+    if (e.keyCode === 83 /* s */){
+      down = true
+    }
+    if (e.keyCode === 65 /* a */){
+      left = true
+    }
+    
+  
+  }
+  document.addEventListener('keyup',release)
+  function release(e){
+    if (e.keyCode === 87 /* w */){
+      up = false
+  
+    }
+    if (e.keyCode === 68 /* d */){
+      right = false
+    }
+    if (e.keyCode === 83 /* s */){
+      down = false
+    }
+    if (e.keyCode === 65 /* a */){
+      left = false
+    }
+  
+  
+  
+  
+    if ( myHitOther('guy','wallT') ){
+     // document.getElementById('guy').style.left = '25px'  
+  
+     upGo = true;
+  
+     document.getElementById('jerdiv').innerHTML = ''
+  
+    
+  }  else {
+    upGo = false;
+  
+    document.getElementById('jerdiv').innerHTML = ''
+  
+  }
+  
+  
+  if ( myHitOther('guy','wallB' ) ){
+     // document.getElementById('guy').style.left = '25px'  
+  
+     downGo = true;
+     document.getElementById('jerdiv').innerHTML = ''
+  
+    
+  }  else {
+    downGo = false;
+    document.getElementById('jerdiv').innerHTML = ''
+  
+  }
+  
+  
+  if ( myHitOther('guy','wallR' ) ){
+     // document.getElementById('guy').style.left = '25px'  
+  
+     rightGo = true;
+     document.getElementById('jerdiv').innerHTML = ''
+  
+    
+  }  else {
+    rightGo = false;
+    document.getElementById('jerdiv').innerHTML = ''
+  
+  }
+  
+  
+  if ( myHitOther('guy','wallL' ) ){
+     // document.getElementById('guy').style.left = '25px'  
+  
+     leftGo = true;
+     document.getElementById('jerdiv').innerHTML = ''
+  
+    
+  }  else {
+    leftGo = false;
+    document.getElementById('jerdiv').innerHTML = ''
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+  function gameLoop(){
+      var div = document.querySelector('div#guy')
+    if (up && upGo){
+      y = y - 5
+  
+    }
+    if (right && rightGo){
+      x = x + 5
+  
+    }
+    if (down && downGo){
+      y = y + 5
+  
+   }
+    if (left && leftGo){
+      x = x - 5
+  
+    }
+  
+    guy.style.left = x+'px'
+    guy.style.top = y+'px'
+    window.requestAnimationFrame(gameLoop)
+  
+  
+    if ( myHitOther('guy','wallT') ){
+     // document.getElementById('guy').style.left = '25px'  
+       upGo = false;
+  
+        document.getElementById('jerdiv').innerHTML = 'hit'
+  
+    
+  }  else {
+    upGo = true;
+  
+    document.getElementById('jerdiv').innerHTML = ''
+  
+  }
+   
+  
+  if ( myHitOther('guy','wallB' ) ){
+     // document.getElementById('guy').style.left = '25px'  
+       downGo = false;
+      
+        document.getElementById('jerdiv').innerHTML = 'hit'
+  
+    
+  }  else {
+    downGo = true;
+    document.getElementById('jerdiv').innerHTML = ''
+  
+  }
+  
+  
+  if ( myHitOther('guy','wallR' ) ){
+     // document.getElementById('guy').style.left = '25px'  
+       rightGo = false;
+      
+        document.getElementById('jerdiv').innerHTML = 'hit'
+  
+    
+  }  else {
+    rightGo = true;
+    document.getElementById('jerdiv').innerHTML = ''
+  
+  }
+  
+  
+  if ( myHitOther('guy','wallL' ) ){
+     // document.getElementById('guy').style.left = '25px'  
+       leftGo = false;
+      
+        document.getElementById('jerdiv').innerHTML = 'hit'
+  
+    
+  }  else {
+    leftGo = true;
+    document.getElementById('jerdiv').innerHTML = ''
+  
+  }
+  
+  
+  
+  
+
+  
+  
+  
+  
+  }
+  window.requestAnimationFrame(gameLoop)
+  </script>
+  
+  
+  <p>
+    <button id="button" style="top: 150px;" onclick="myMove()">Start</button> 
+    </p>
+       
+    <div id ="myContainer">
+     <div id="myDiv01">                                                                            
+       <img id="myObs" src="red.png" style="position: absolute; left: 00; top: 100; width: 15; height: 15;">
+       <img id="myObs01" src="red.png" style="position: absolute; left: 5; top: 175; width: 5; height: 5;">
+       <img id="myObs02" src="red.png" style="position: absolute; left: 35; top: 250; width: 5; height: 5;">
+       <img id="myObs03" src="red.png" style="position: absolute; left: 5; top: 25; width: 5; height: 5;">
+       <img id="myObs04" src="red.png" style="position: absolute; left: 30; top: -35; width: 5; height: 5;">
+  
+       <img id="myObs05" src="red.png" style="position: absolute; left: -200; top: 100; width: 5; height: 5;">
+       <img id="myObs06" src="red.png" style="position: absolute; left: -250; top: 175; width: 5; height: 5;">
+       <img id="myObs07" src="red.png" style="position: absolute; left: -275; top: 250; width: 5; height: 5;">
+       <img id="myObs08" src="red.png" style="position: absolute; left: -250; top: 25; width: 5; height: 5;">
+       <img id="myObs09" src="red.png" style="position: absolute; left: -2230; top: -35; width: 5; height: 5;">
+      </div>
+    </div>
+    
+    <script>
+    function myMove() {
+      var elem = document.getElementById("myDiv01");   
+      var pos = 0;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (pos >= 1560) {
+         // clearInterval(Id);
+         // pos = 0
+         // alert()
+          pos = 0
+          elem.style.left = pos + 'px'; 
+          clearInterval(id);
+        }
+        
+        else {
+          pos++; 
+          elem.style.top = pos - 'px'; 
+          elem.style.left = pos + 'px'; 
+        }
+      }
+    }
+    </script>
