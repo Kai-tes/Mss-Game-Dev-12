@@ -1,0 +1,362 @@
+
+<style>
+    body{
+    color: white;
+    background-image: url('brick.jpg');
+    }
+    /*
+  #wallT{
+    position: absolute;
+    left: 25px ; 
+    top: 0px; 
+    width: 1525px; 
+    height: 250px ;
+  
+  }
+  
+  #wallBottom{
+    position: absolute;
+     left: 60; 
+     top: 580; 
+     width: 1500px; 
+     height: 250px;
+  
+  }
+  
+  #wallL{
+    position: absolute; 
+    left: 75;
+     top: 45; 
+     width: 275px; 
+     height: 720px; 
+  
+  }
+  
+  #wallRight{
+    position: absolute; 
+    left: 1050; 
+    top: 69;
+    width: 775;
+    height: 678px;
+  }
+  */
+  
+
+  /*
+  #mySpan01{
+    position: absolute;
+    color: rgb(255, 255, 255);
+  left: 1450px;
+  top: 275px;
+  border: dotted  rgb(255, 255, 255);
+  height: 100px;
+  width:200px;
+  }
+*/
+#mySpan02{
+  text-align: center;
+  font-size: 50px;
+  left: 500px;
+}
+
+
+
+    </style>
+  <br><br><br>
+<span id="mySpan02" style="position: absolute; text-align: center; font-size: 50px; top: 150px; left: 650px;">^</span>
+<br><br><br><br><br><br>
+<span id="mySpan03" style="position: absolute; text-align: center; font-size: 50px; top: 275px; left: 425px;">There is nothing here go back :)</span>
+ <div style="background-image: url('brick.jpg');"></div>
+
+<!---wall Right and Bottom are broke-->
+
+<img id="wallT" src="wall.png" style="position: absolute; left: 50; top: 625; width:1450; height: 15px;">
+
+<img id="wallBottom" src="wall.2.png" style="position: absolute; left: 50px;  top: 10px; width:500; height:15 ;">
+<img id="wallB2" src="wall.2.png" style="position: absolute; left: 800; top: 10; width:700; height: 15;">
+
+<img id="wallL" src="wall.3.png" style="position: absolute; left: 50;top: 10; width: 15; height: 625;">
+
+<img id="wallRight" src="wall.4.png" style="  position: absolute; left: 1485; top: 10; width: 15; height: 250;">
+<img id="wallR2" src="wall.4.png" style="  position: absolute; left: 1485; top: 375; width: 15; height:250 ;">
+
+
+
+<span id="mySpan01" style="  position: absolute; left: 550; top: 10; width: 15; height:250 ;border:  rgb(255, 255, 255);height: 5px; width:250px;"></span>
+
+
+<script>
+  function myHitOther(my1,my2){
+     left1   = parseInt(document.getElementById(my1).style.left)
+     right1  = left1 + parseInt(document.getElementById(my1).style.width)
+     top1    = parseInt(document.getElementById(my1).style.top)   
+     bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+     left2   = parseInt(document.getElementById(my2).style.left)
+     right2  = left2 + parseInt(document.getElementById(my2).style.width)
+     top2    = parseInt(document.getElementById(my2).style.top)   
+     bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+     if ((right1  >=  left2  ) &&      	   
+         (bottom1 >=  top2   ) &&
+         (left1   <=  right2 ) &&
+         (top1    <=  bottom2) ){
+         return true
+     }
+  }
+  
+  </script>
+<script>
+function bottom(){
+document.getElementById('guy').style.left = '100px'  
+}
+
+function win(){
+  location = 'T4-A01-game-level1-kai2.html'
+}
+
+
+</script>
+
+<div id="divv">
+    <img id="guy" src="player.png" style="position: absolute; left: 250; top: 350; width: 75; height: 75;">
+</div>
+
+
+<script>
+  var up = false,
+    right = false,
+    down = false,
+    left = false,
+    upGo = true,
+    leftGo = true,
+    rightGo = true,
+    downGo = true,
+    x = window.innerWidth/2- 350 /2, 
+    y = window.innerHeight/2-650/2
+document.addEventListener('keydown',press)
+function press(e){
+
+
+  if (e.keyCode === 87 /* w */){
+    up = true
+
+  }
+  if (e.keyCode === 68 /* d */){
+    right = true
+  }
+  if (e.keyCode === 83 /* s */){
+    down = true
+  }
+  if (e.keyCode === 65 /* a */){
+    left = true
+  }
+  
+
+}
+document.addEventListener('keyup',release)
+function release(e){
+  if (e.keyCode === 87 /* w */){
+    up = false
+
+  }
+  if (e.keyCode === 68 /* d */){
+    right = false
+  }
+  if (e.keyCode === 83 /* s */){
+    down = false
+  }
+  if (e.keyCode === 65 /* a */){
+    left = false
+  }
+
+
+/*
+
+  if ( myHitOther('guy','wallT') ){
+   // document.getElementById('guy').style.left = '25px'  
+
+   upGo = true;
+
+ 
+  
+} 
+
+
+if ( myHitOther('guy','wallBottom' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+
+   downGo = true;
+ 
+
+  
+}  
+
+if ( myHitOther('guy','wallB2' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+
+   downGo = true;
+ 
+
+  
+}
+
+
+if ( myHitOther('guy','wallRight' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+
+   rightGo = true;
+ 
+
+  
+}  
+
+if ( myHitOther('guy','wallR2' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+
+   rightGo = true;
+ 
+
+  
+}  
+
+if ( myHitOther('guy','wallL' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+
+   leftGo = true;
+ 
+
+  
+}  
+if ( myHitOther('guy','mySpan01' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+win()
+   rightGo = true;
+ 
+
+  
+}  
+
+
+
+*/
+
+
+}
+function gameLoop(){
+    var div = document.querySelector('div#guy')
+  if (up && upGo){
+    y = y - 5
+
+  }
+  if (right && rightGo){
+    x = x + 5
+
+  }
+ 
+  if (down && downGo){
+    y = y + 5
+
+ }
+
+
+  if (left && leftGo){
+    x = x - 5
+
+  }
+
+  guy.style.left = x+'px'
+  guy.style.top = y+'px'
+  window.requestAnimationFrame(gameLoop)
+
+
+
+// all game checks
+
+
+
+
+  if ( myHitOther('guy','mySpan01') ){
+  
+      location='testing2.html'
+
+  
+} 
+
+
+
+
+
+
+
+
+  upGo    = true;
+  downGo  = true;
+  rightGo = true;
+  leftGo  = true;
+
+  if ( myHitOther('guy','wallT') ){
+   // document.getElementById('guy').style.left = '25px'  
+     upGo = false;
+    
+      
+
+  
+} 
+
+if ( myHitOther('guy','wallBottom' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+     downGo = false;
+    
+      
+
+  
+} 
+
+if ( myHitOther('guy','wallB2' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+     downGo = false;
+    
+      
+
+  
+}  
+
+if ( myHitOther('guy','wallRight' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+     rightGo = false;
+    
+      
+
+  
+}  
+
+if ( myHitOther('guy','wallR2' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+     rightGo = false;
+    
+      
+
+  
+} 
+
+
+if ( myHitOther('guy','wallL' ) ){
+   // document.getElementById('guy').style.left = '25px'  
+     leftGo = false;
+    
+      
+
+  
+} 
+
+
+
+}
+window.requestAnimationFrame(gameLoop)
+</script>
+      
+
+
+
+
+
+

@@ -1,0 +1,433 @@
+<title>The Mazze</title>
+<style>
+    body{
+    color: white;
+    background-image: url('brick.jpg');
+    }
+    
+
+
+
+    </style>
+
+ <div style="background-image: url('brick.jpg');"></div>
+
+
+<!----outside walls-->
+<img id="wallT" src="wall.png" style="position: absolute; left: 50px;  top: 10px; width:1450; height: 15px;">
+
+<img id="wallBottom" src="wall.2.png" style="position: absolute; left: 50; top: 625; width:500; height:15 ;">
+<img id="wallB2" src="wall.2.png" style="position: absolute; left: 800; top: 625; width:700; height: 15;">
+
+<img id="wallL" src="wall.3.png" style="position: absolute; left: 50;top: 10; width: 15; height: 625;">
+
+<img id="wallRight" src="wall.4.png" style="  position: absolute; left: 1485; top: 10; width: 15; height: 250;">
+<img id="wallR2" src="wall.4.png" style="  position: absolute; left: 1485; top: 375; width: 15; height:250 ;">
+
+<!---inside walls-->
+<img id="wall1" src="wall.2.png" alt="wall1" style="position: absolute; top: 150px; left: 50px; width: 300px; height: 5px;">
+
+
+<img id="wall2" src="wall.3.png" alt="wall2" style="position: absolute; top: 10px; left: 500px; width: 5px; height: 300px;">
+
+
+<img id="wall3" src="wall.2.png" alt="wall1" style="position: absolute; top: 305px; left: 200px; width: 300px; height: 5px;">
+
+
+<img id="wall4" src="wall.2.png" alt="wall1" style="position: absolute; top: 405px; left: 50px; width: 600px; height: 5px;">
+
+
+<img id="wall5" src="wall.3.png" alt="wall2" style="position: absolute; top: 210px; left: 650px; width: 5px; height: 200px;">
+
+
+<img id="wall6" src="wall.3.png" alt="wall2" style="position: absolute; top: 10px; left: 650px; width: 5px; height: 75px;">
+
+
+<img id="wall7" src="wall.2.png" alt="wall1" style="position: absolute; top: 210px; left: 650px; width: 550px; height: 5px;">
+
+
+<img id="wall8" src="wall.3.png" alt="wall2" style="position: absolute; top: 110px; left: 800px; width: 5px; height: 100px;">
+
+
+<img id="wall9" src="wall.3.png" alt="wall2" style="position: absolute; top: 10px; left: 950px; width: 5px; height: 100px;">
+
+
+<img id="wall10" src="wall.3.png" alt="wall2" style="position: absolute; top: 110px; left: 1100px; width: 5px; height: 100px;">
+
+
+<img id="wall11" src="wall.2.png" alt="wall1" style="position: absolute; top: 210px; left: 1325px; width: 175px; height: 5px;">
+
+
+<img id="wall12" src="wall.3.png" alt="wall2" style="position: absolute; top: 210px; left: 1325px; width: 5px; height: 175px;">
+
+
+<img id="wall13" src="wall.2.png" alt="wall1" style="position: absolute; top: 380px; left: 800px; width: 525px; height: 5px;">
+
+
+<img id="wall14" src="wall.3.png" alt="wall2" style="position: absolute; top: 380px; left: 800px; width: 5px; height: 140px;">
+
+
+<img id="wall15" src="wall.2.png" alt="wall1" style="position: absolute; top: 515px; left: 800px; width: 525px; height: 5px;">
+
+
+<img id="wall16" src="wall.2.png" alt="wall1" style="position: absolute; top: 515px; left: 200px; width: 600px; height: 5px;">
+
+
+
+
+<span id="mySpan03" style="  position: absolute; left: 200px; top: 50px; width: 15; height:250 ;border:  rgb(255, 255, 255);height: 15px; width:15px;"></span>
+<span id="mySpan01" style="  position: absolute; left: 550; top: 630; width: 15; height:250 ;border:  rgb(255, 255, 255);height: 5px; width:250px;"></span>
+<span id="mySpan02" style="  position: absolute; left: 1490; top: 255; width: 15; height:255 ;border:  rgb(255, 255, 255);height: 115px; width:5px;"></span>
+
+<script>
+  function myHitOther(my1,my2){
+     left1   = parseInt(document.getElementById(my1).style.left)
+     right1  = left1 + parseInt(document.getElementById(my1).style.width)
+     top1    = parseInt(document.getElementById(my1).style.top)   
+     bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+     left2   = parseInt(document.getElementById(my2).style.left)
+     right2  = left2 + parseInt(document.getElementById(my2).style.width)
+     top2    = parseInt(document.getElementById(my2).style.top)   
+     bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+     if ((right1  >=  left2  ) &&      	   
+         (bottom1 >=  top2   ) &&
+         (left1   <=  right2 ) &&
+         (top1    <=  bottom2) ){
+         return true
+     }
+  }
+  
+  </script>
+
+<div id="divv">
+    <img id="guy" src="player.png" style="position: absolute; left: 250; top: 350; width: 75; height: 75;">
+</div>
+
+
+<script>
+  var up = false,
+    right = false,
+    down = false,
+    left = false,
+    upGo = true,
+    leftGo = true,
+    rightGo = true,
+    downGo = true,
+    x = window.innerWidth/2-1450 /2, 
+    y = window.innerHeight/2-700/2
+document.addEventListener('keydown',press)
+function press(e){
+
+
+  if (e.keyCode === 87 /* w */){
+    up = true
+
+  }
+  if (e.keyCode === 68 /* d */){
+    right = true
+  }
+  if (e.keyCode === 83 /* s */){
+    down = true
+  }
+  if (e.keyCode === 65 /* a */){
+    left = true
+  }
+  
+
+}
+document.addEventListener('keyup',release)
+function release(e){
+  if (e.keyCode === 87 /* w */){
+    up = false
+
+  }
+  if (e.keyCode === 68 /* d */){
+    right = false
+  }
+  if (e.keyCode === 83 /* s */){
+    down = false
+  }
+  if (e.keyCode === 65 /* a */){
+    left = false
+  }
+
+
+
+
+
+}
+function gameLoop(){
+    var div = document.querySelector('div#guy')
+  if (up && upGo){
+    y = y - 5
+
+  }
+  if (right && rightGo){
+    x = x + 5
+
+  }
+ 
+  if (down && downGo){
+    y = y + 5
+
+ }
+
+
+  if (left && leftGo){
+    x = x - 5
+
+  }
+
+  guy.style.left = x+'px'
+  guy.style.top = y+'px'
+  window.requestAnimationFrame(gameLoop)
+
+
+
+// all game checks
+
+
+
+
+  if ( myHitOther('guy','mySpan01') ){
+  
+      location='level 2.html'
+
+  
+} 
+
+if ( myHitOther('guy','mySpan02') ){
+  
+  location='gamebase3.html'
+
+
+} 
+
+
+
+
+
+
+
+
+  upGo    = true;
+  downGo  = true;
+  rightGo = true;
+  leftGo  = true;
+
+  if ( myHitOther('guy','wall1') ){         
+    
+    upGo = true;
+   downGo = false;
+  rightGo = true;
+  leftGo = true;
+ 
+} 
+
+
+
+
+if ( myHitOther('guy','wall2') ){          
+    
+    upGo = true;
+   downGo = true;
+  rightGo = false;
+  leftGo = true;
+ 
+} 
+
+
+if ( myHitOther('guy','wall3') ){
+    
+    upGo = true;
+   downGo = false;
+  rightGo = true;
+  leftGo = true;
+}
+
+
+if ( myHitOther('guy','wall4') ){
+    
+    upGo = true;
+   downGo = false;
+  rightGo = true;
+  leftGo = true;
+}
+
+
+if ( myHitOther('guy','wall5') ){
+    
+    upGo = true;
+   downGo = true;
+  rightGo = false;
+  leftGo = true;
+ 
+} 
+
+if ( myHitOther('guy','wall6') ){          
+    
+    upGo = true;
+   downGo = true;
+  rightGo = false;
+  leftGo = true;
+ 
+} 
+
+
+if ( myHitOther('guy','wall7') ){         
+    
+    upGo = true;
+   downGo = false;
+  rightGo = true;
+  leftGo = true;
+ 
+} 
+
+if ( myHitOther('guy','wall8') ){          
+    
+    upGo = true;
+   downGo = true;
+  rightGo = false;
+  leftGo = true;
+ 
+} 
+
+if ( myHitOther('guy','wall9') ){          
+    
+    upGo = true;
+   downGo = true;
+  rightGo = false;
+  leftGo = true;
+ 
+} 
+
+if ( myHitOther('guy','wall10') ){          
+    
+    upGo = true;
+   downGo = true;
+  rightGo = false;
+  leftGo = true;
+ 
+} 
+
+if ( myHitOther('guy','wall11') ){         
+    
+    upGo = true;
+   downGo = false;
+  rightGo = true;
+  leftGo = true;
+ 
+} 
+
+if ( myHitOther('guy','wall12') ){          
+    
+    upGo = true;
+   downGo = true;
+  rightGo = false;
+  leftGo = true;
+ 
+}
+
+if ( myHitOther('guy','wall13') ){         
+    
+    upGo = true;
+   downGo = false;
+  rightGo = true;
+  leftGo = true;
+ 
+} 
+
+if ( myHitOther('guy','wall14') ){          
+    
+    upGo = true;
+   downGo = true;
+  rightGo = false;
+  leftGo = true;
+ 
+}
+
+if ( myHitOther('guy','wall15') ){         
+    
+    upGo = true;
+   downGo = false;
+  rightGo = true;
+  leftGo = true;
+ 
+} 
+
+if ( myHitOther('guy','wall16') ){         
+    
+    upGo = true;
+   downGo = false;
+  rightGo = true;
+  leftGo = true;
+ 
+} 
+  if ( myHitOther('guy','wallT') ){      
+    
+     upGo = false;
+    
+      
+
+  
+} 
+
+if ( myHitOther('guy','wallBottom' ) ){
+    
+     downGo = false;
+    
+      
+
+  
+} 
+
+if ( myHitOther('guy','wallB2' ) ){
+    
+     downGo = false;
+    
+      
+
+  
+}  
+
+if ( myHitOther('guy','wallRight' ) ){
+    
+     rightGo = false;
+    
+      
+
+  
+}  
+
+if ( myHitOther('guy','wallR2' ) ){
+    
+     rightGo = false;
+    
+      
+
+  
+} 
+
+
+if ( myHitOther('guy','wallL' ) ){
+    
+     leftGo = false;
+    
+      
+
+  
+} 
+
+
+
+}
+window.requestAnimationFrame(gameLoop)
+</script>
+      
+
+
+
+
+
+
+
